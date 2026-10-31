@@ -1297,3 +1297,6 @@ body {
     font-size: 72px;
   }
 }
+
+/* Ajustes da versão JavaScript puro */
+html,body,#root{min-height:100%;margin:0}body{min-height:100vh}.album-shell{min-height:100vh;min-height:100dvh}button{cursor:pointer;font:inherit}button:focus-visible{outline:2px solid currentColor;outline-offset:4px}#album-photo{display:block}#image-error{z-index:2}
