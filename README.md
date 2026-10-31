@@ -11,9 +11,14 @@
 2. Procure por `CONFIGURAÇÃO DOS SLIDES`.
 3. Altere o campo `title` para mudar o título exibido.
 4. Altere `imageSrc` para apontar para outro arquivo dentro de `images/`.
-5. Preserve o nome e a extensão exatos do arquivo. Exemplo: `./images/arena timão.jpg`.
+5. Use o arquivo WebP correspondente. Exemplo: `./images/arena timão.webp`. As versões JPG originais foram mantidas na pasta `images/` como cópia de segurança.
 
 O campo `themeKey` define o tema visual do slide. Não altere esse campo se quiser manter o tema atual.
+
+## Imagens e desempenho
+- As 28 imagens usadas pelo álbum estão em formato WebP, com qualidade 82.
+- Os arquivos JPG originais foram preservados como backup.
+- Para trocar uma imagem, envie o novo arquivo para `images/` e atualize o caminho `imageSrc` no `js/app.js`.
 
 ## Publicação
 O projeto continua compatível com GitHub Pages. A aplicação não utiliza React nem exige instalação de dependências ou processo de build.
