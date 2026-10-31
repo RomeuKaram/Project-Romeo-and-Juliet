@@ -16,4 +16,4 @@
 O campo `themeKey` define o tema visual do slide. Não altere esse campo se quiser manter o tema atual.
 
 ## Publicação
-O projeto continua compatível com GitHub Pages. Não é necessário instalar dependências nem executar um processo de build.
+O projeto continua compatível com GitHub Pages. A aplicação não utiliza React nem exige instalação de dependências ou processo de build.
