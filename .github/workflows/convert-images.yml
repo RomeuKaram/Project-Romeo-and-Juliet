@@ -1,0 +1,64 @@
+name: Otimizar imagens para WebP
+
+on:
+  push:
+    paths:
+      - "images/**"
+      - ".github/workflows/convert-images.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  convert:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Baixar repositório
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Configurar Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Instalar Pillow
+        run: python -m pip install --upgrade Pillow
+
+      - name: Converter imagens para WebP
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+          from PIL import Image, ImageOps
+
+          folder = Path("images")
+          converted = 0
+          for source in sorted(folder.iterdir()):
+              if not source.is_file() or source.suffix.lower() not in {".jpg", ".jpeg", ".png"}:
+                  continue
+              target = source.with_suffix(".webp")
+              with Image.open(source) as original:
+                  image = ImageOps.exif_transpose(original)
+                  if image.mode not in ("RGB", "RGBA"):
+                      image = image.convert("RGBA" if "A" in image.getbands() else "RGB")
+                  image.save(target, "WEBP", quality=82, method=6)
+              before = source.stat().st_size
+              after = target.stat().st_size
+              print(f"{source.name}: {before:,} -> {after:,} bytes ({(1-after/before)*100:.1f}% menor)")
+              converted += 1
+          print(f"Total convertido: {converted}")
+          PY
+
+      - name: Salvar versões WebP no GitHub
+        run: |
+          if git status --short | grep -q 'images/.*\.webp'; then
+            git config user.name "github-actions[bot]"
+            git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+            git add images/*.webp
+            git commit -m "Adiciona versões WebP otimizadas das imagens"
+            git push
+          else
+            echo "Nenhuma imagem WebP nova para salvar."
+          fi
