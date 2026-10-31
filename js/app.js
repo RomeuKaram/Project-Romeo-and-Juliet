@@ -271,201 +271,201 @@ const THEMES = {
 // ===== CONFIGURAÇÃO DOS SLIDES =====
 const SLIDES = [
   {
-    "id": 1,
-    "title": "arena timão",
-    "imageSrc": "./images/arena timão.webp",
-    "fileName": "arena timão",
-    "themeKey": "corinthians"
-  },
+      "id": 1,
+      "title": "romeu e julieta",
+      "imageSrc": "./images/romeu e julieta.webp",
+      "fileName": "romeu e julieta",
+      "themeKey": "romeujulieta"
+    },
   {
-    "id": 2,
-    "title": "capa quadrinhos super casal",
-    "imageSrc": "./images/capa quadrinhos super casal.webp",
-    "fileName": "capa quadrinhos super casal",
-    "themeKey": "quadrinhos"
-  },
+      "id": 2,
+      "title": "estilo ghibli",
+      "imageSrc": "./images/estilo ghibli.webp",
+      "fileName": "estilo ghibli",
+      "themeKey": "ghibli"
+    },
   {
-    "id": 3,
-    "title": "coringa e arlequina",
-    "imageSrc": "./images/coringa e arlequina.webp",
-    "fileName": "coringa e arlequina",
-    "themeKey": "coringa"
-  },
+      "id": 3,
+      "title": "capa quadrinhos super casal",
+      "imageSrc": "./images/capa quadrinhos super casal.webp",
+      "fileName": "capa quadrinhos super casal",
+      "themeKey": "quadrinhos"
+    },
   {
-    "id": 4,
-    "title": "estilo attack on titan",
-    "imageSrc": "./images/estilo attack on titan.webp",
-    "fileName": "estilo attack on titan",
-    "themeKey": "aot"
-  },
+      "id": 4,
+      "title": "estilo clube das winx",
+      "imageSrc": "./images/estilo clube das winx.webp",
+      "fileName": "estilo clube das winx",
+      "themeKey": "winx"
+    },
   {
-    "id": 5,
-    "title": "estilo clube das winx",
-    "imageSrc": "./images/estilo clube das winx.webp",
-    "fileName": "estilo clube das winx",
-    "themeKey": "winx"
-  },
+      "id": 5,
+      "title": "estilo os incriveis",
+      "imageSrc": "./images/estilo os incriveis.webp",
+      "fileName": "estilo os incriveis",
+      "themeKey": "incredibles"
+    },
   {
-    "id": 6,
-    "title": "estilo demon slayer",
-    "imageSrc": "./images/estilo demon slayer.webp",
-    "fileName": "estilo demon slayer",
-    "themeKey": "demon"
-  },
+      "id": 6,
+      "title": "estilo looney tunes",
+      "imageSrc": "./images/estilo looney tunes.webp",
+      "fileName": "estilo looney tunes",
+      "themeKey": "looney"
+    },
   {
-    "id": 7,
-    "title": "estilo dragon ball anime",
-    "imageSrc": "./images/estilo dragon ball anime.webp",
-    "fileName": "estilo dragon ball anime",
-    "themeKey": "dbAnime"
-  },
+      "id": 7,
+      "title": "estilo simpsons",
+      "imageSrc": "./images/estilo simpsons.webp",
+      "fileName": "estilo simpsons",
+      "themeKey": "simpsons"
+    },
   {
-    "id": 8,
-    "title": "estilo dragon ball live action",
-    "imageSrc": "./images/estilo dragon ball live action.webp",
-    "fileName": "estilo dragon ball live action",
-    "themeKey": "dbLive"
-  },
+      "id": 8,
+      "title": "estilo mario",
+      "imageSrc": "./images/estilo mario.webp",
+      "fileName": "estilo mario",
+      "themeKey": "mario"
+    },
   {
-    "id": 9,
-    "title": "estilo dungeons and dragons",
-    "imageSrc": "./images/estilo dungeons and dragons.webp",
-    "fileName": "estilo dungeons and dragons",
-    "themeKey": "dnd"
-  },
+      "id": 9,
+      "title": "estilo dragon ball anime",
+      "imageSrc": "./images/estilo dragon ball anime.webp",
+      "fileName": "estilo dragon ball anime",
+      "themeKey": "dbAnime"
+    },
   {
-    "id": 10,
-    "title": "estilo ghibli",
-    "imageSrc": "./images/estilo ghibli.webp",
-    "fileName": "estilo ghibli",
-    "themeKey": "ghibli"
-  },
+      "id": 10,
+      "title": "estilo dragon ball live action",
+      "imageSrc": "./images/estilo dragon ball live action.webp",
+      "fileName": "estilo dragon ball live action",
+      "themeKey": "dbLive"
+    },
   {
-    "id": 11,
-    "title": "estilo GTA",
-    "imageSrc": "./images/estilo GTA.webp",
-    "fileName": "estilo GTA",
-    "themeKey": "gta"
-  },
+      "id": 11,
+      "title": "estilo demon slayer",
+      "imageSrc": "./images/estilo demon slayer.webp",
+      "fileName": "estilo demon slayer",
+      "themeKey": "demon"
+    },
   {
-    "id": 12,
-    "title": "estilo looney tunes",
-    "imageSrc": "./images/estilo looney tunes.webp",
-    "fileName": "estilo looney tunes",
-    "themeKey": "looney"
-  },
+      "id": 12,
+      "title": "estilo attack on titan",
+      "imageSrc": "./images/estilo attack on titan.webp",
+      "fileName": "estilo attack on titan",
+      "themeKey": "aot"
+    },
   {
-    "id": 13,
-    "title": "estilo mario",
-    "imageSrc": "./images/estilo mario.webp",
-    "fileName": "estilo mario",
-    "themeKey": "mario"
-  },
+      "id": 13,
+      "title": "estilo peter e mary jane",
+      "imageSrc": "./images/estilo peter e mary jane.webp",
+      "fileName": "estilo peter e mary jane",
+      "themeKey": "spiderman"
+    },
   {
-    "id": 14,
-    "title": "estilo matrix",
-    "imageSrc": "./images/estilo matrix.webp",
-    "fileName": "estilo matrix",
-    "themeKey": "matrix"
-  },
+      "id": 14,
+      "title": "estilo peter e MJ",
+      "imageSrc": "./images/estilo peter e MJ.webp",
+      "fileName": "estilo peter e MJ",
+      "themeKey": "spiderman"
+    },
   {
-    "id": 15,
-    "title": "estilo os incriveis",
-    "imageSrc": "./images/estilo os incriveis.webp",
-    "fileName": "estilo os incriveis",
-    "themeKey": "incredibles"
-  },
+      "id": 15,
+      "title": "Super Heroes",
+      "imageSrc": "./images/Super Heroes.webp",
+      "fileName": "Super Heroes",
+      "themeKey": "superheroes"
+    },
   {
-    "id": 16,
-    "title": "estilo peter e mary jane",
-    "imageSrc": "./images/estilo peter e mary jane.webp",
-    "fileName": "estilo peter e mary jane",
-    "themeKey": "spiderman"
-  },
+      "id": 16,
+      "title": "coringa e arlequina",
+      "imageSrc": "./images/coringa e arlequina.webp",
+      "fileName": "coringa e arlequina",
+      "themeKey": "coringa"
+    },
   {
-    "id": 17,
-    "title": "estilo peter e MJ",
-    "imageSrc": "./images/estilo peter e MJ.webp",
-    "fileName": "estilo peter e MJ",
-    "themeKey": "spiderman"
-  },
+      "id": 17,
+      "title": "estilo wade deadpool e vanessa",
+      "imageSrc": "./images/estilo wade deadpool e vanessa.webp",
+      "fileName": "estilo wade deadpool e vanessa",
+      "themeKey": "deadpool"
+    },
   {
-    "id": 18,
-    "title": "estilo senhor dos aneis self",
-    "imageSrc": "./images/estilo senhor dos aneis self.webp",
-    "fileName": "estilo senhor dos aneis self",
-    "themeKey": "lotr"
-  },
+      "id": 18,
+      "title": "estilo GTA",
+      "imageSrc": "./images/estilo GTA.webp",
+      "fileName": "estilo GTA",
+      "themeKey": "gta"
+    },
   {
-    "id": 19,
-    "title": "estilo senhor dos aneis",
-    "imageSrc": "./images/estilo senhor dos aneis.webp",
-    "fileName": "estilo senhor dos aneis",
-    "themeKey": "lotr"
-  },
+      "id": 19,
+      "title": "motoqueiros",
+      "imageSrc": "./images/motoqueiros.webp",
+      "fileName": "motoqueiros",
+      "themeKey": "moto"
+    },
   {
-    "id": 20,
-    "title": "estilo simpsons",
-    "imageSrc": "./images/estilo simpsons.webp",
-    "fileName": "estilo simpsons",
-    "themeKey": "simpsons"
-  },
+      "id": 20,
+      "title": "estilo matrix",
+      "imageSrc": "./images/estilo matrix.webp",
+      "fileName": "estilo matrix",
+      "themeKey": "matrix"
+    },
   {
-    "id": 21,
-    "title": "estilo the witcher",
-    "imageSrc": "./images/estilo the witcher.webp",
-    "fileName": "estilo the witcher",
-    "themeKey": "witcher"
-  },
+      "id": 21,
+      "title": "estilo dungeons and dragons",
+      "imageSrc": "./images/estilo dungeons and dragons.webp",
+      "fileName": "estilo dungeons and dragons",
+      "themeKey": "dnd"
+    },
   {
-    "id": 22,
-    "title": "estilo wade deadpool e vanessa",
-    "imageSrc": "./images/estilo wade deadpool e vanessa.webp",
-    "fileName": "estilo wade deadpool e vanessa",
-    "themeKey": "deadpool"
-  },
+      "id": 22,
+      "title": "estilo the witcher",
+      "imageSrc": "./images/estilo the witcher.webp",
+      "fileName": "estilo the witcher",
+      "themeKey": "witcher"
+    },
   {
-    "id": 23,
-    "title": "motoqueiros",
-    "imageSrc": "./images/motoqueiros.webp",
-    "fileName": "motoqueiros",
-    "themeKey": "moto"
-  },
+      "id": 23,
+      "title": "senhor dos aneis",
+      "imageSrc": "./images/senhor dos aneis.webp",
+      "fileName": "senhor dos aneis",
+      "themeKey": "lotr"
+    },
   {
-    "id": 24,
-    "title": "romeu e julieta",
-    "imageSrc": "./images/romeu e julieta.webp",
-    "fileName": "romeu e julieta",
-    "themeKey": "romeujulieta"
-  },
+      "id": 24,
+      "title": "estilo senhor dos aneis self",
+      "imageSrc": "./images/estilo senhor dos aneis self.webp",
+      "fileName": "estilo senhor dos aneis self",
+      "themeKey": "lotr"
+    },
   {
-    "id": 25,
-    "title": "senhor dos aneis",
-    "imageSrc": "./images/senhor dos aneis.webp",
-    "fileName": "senhor dos aneis",
-    "themeKey": "lotr"
-  },
+      "id": 25,
+      "title": "estilo senhor dos aneis",
+      "imageSrc": "./images/estilo senhor dos aneis.webp",
+      "fileName": "estilo senhor dos aneis",
+      "themeKey": "lotr"
+    },
   {
-    "id": 26,
-    "title": "simpsons arena corinthians",
-    "imageSrc": "./images/simpsons arena corinthians.webp",
-    "fileName": "simpsons arena corinthians",
-    "themeKey": "corinthiansSimpsons"
-  },
+      "id": 26,
+      "title": "arena timão",
+      "imageSrc": "./images/arena timão.webp",
+      "fileName": "arena timão",
+      "themeKey": "corinthians"
+    },
   {
-    "id": 27,
-    "title": "Super Heroes",
-    "imageSrc": "./images/Super Heroes.webp",
-    "fileName": "Super Heroes",
-    "themeKey": "superheroes"
-  },
+      "id": 27,
+      "title": "simpsons arena corinthians",
+      "imageSrc": "./images/simpsons arena corinthians.webp",
+      "fileName": "simpsons arena corinthians",
+      "themeKey": "corinthiansSimpsons"
+    },
   {
-    "id": 28,
-    "title": "vai corinthians",
-    "imageSrc": "./images/vai corinthians.webp",
-    "fileName": "vai corinthians",
-    "themeKey": "corinthians"
-  }
+      "id": 28,
+      "title": "vai corinthians",
+      "imageSrc": "./images/vai corinthians.webp",
+      "fileName": "vai corinthians",
+      "themeKey": "corinthians"
+    }
 ];
 
 const root = document.querySelector("#root");
