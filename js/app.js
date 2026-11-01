@@ -468,6 +468,15 @@ const SLIDES = [
     }
 ];
 
+// ===== DIVISÃO NARRATIVA EM CINCO ATOS =====
+const ACTS = [
+  { id: 1, title: "A abertura romântica", subtitle: "Onde nossa história começa", start: 0, end: 4 },
+  { id: 2, title: "Diversão e nostalgia", subtitle: "Personagens, mundos e boas lembranças", start: 5, end: 11 },
+  { id: 3, title: "Heróis, vilões e ação", subtitle: "Aventuras de todos os universos", start: 12, end: 19 },
+  { id: 4, title: "Aventura e fantasia épica", subtitle: "Grandes jornadas, lado a lado", start: 20, end: 24 },
+  { id: 5, title: "O grande final", subtitle: "Preto, branco e amor pelo Timão", start: 25, end: 27 }
+];
+
 const root = document.querySelector("#root");
 let current = 0, startX = null, startY = null;
 const esc = s => String(s).replace(/[&<>"']/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
@@ -479,7 +488,7 @@ const next = () => go(current + 1);
 function preload(){ [-1,1].forEach(n=>{const img=new Image();img.src=SLIDES[(current+n+SLIDES.length)%SLIDES.length].imageSrc;}); }
 
 function render(){
- const p=slide(), t=theme(), n=String(current+1).padStart(2,"0"), total=String(SLIDES.length).padStart(2,"0");
+ const p=slide(), t=theme(), act=ACTS.find(a=>current>=a.start&&current<=a.end)||ACTS[0], n=String(current+1).padStart(2,"0"), total=String(SLIDES.length).padStart(2,"0");
  const dark=["quadrinhos","winx","ghibli","looney","simpsons"].includes(t.key);
  const shadow=["quadrinhos","looney","simpsons"].includes(t.key)?"3px 3px 0 #000":t.key==="matrix"?`0 0 12px ${t.accent}`:t.key==="mario"?"4px 4px 0 #000":"0 8px 30px rgba(0,0,0,.25)";
  const texture=t.key==="quadrinhos"?"radial-gradient(#000 2.5px,transparent 3px)":t.key==="matrix"?"repeating-linear-gradient(0deg,transparent,transparent 2px,rgba(0,255,65,.04) 2px,rgba(0,255,65,.04) 3px)":"none";
@@ -502,12 +511,19 @@ function render(){
  ${t.key==="gta"?'<div class="absolute right-0 top-0 bottom-0 w-10 bg-[#CCFF00] flex items-center justify-center"><span class="rotate-90 text-black font-black text-[10px] tracking-[0.3em]">WANTED</span></div>':""}</div>
  <div class="lg:hidden mt-3 flex gap-3"><button data-action="previous" aria-label="Foto anterior" class="w-9 h-9 rounded-full bg-black/30 border border-white/15 text-white">‹</button><button data-action="next" aria-label="Próxima foto" class="w-9 h-9 rounded-full bg-black/30 border border-white/15 text-white">›</button></div></section>
  <section class="w-full lg:w-[48%] flex flex-col items-center lg:items-start text-center lg:text-left gap-3 sm:gap-4">
- <div class="subtitle-animate flex items-center gap-3"><span class="h-px w-8 sm:w-12" style="background:${t.accent}"></span><span class="text-[13px] sm:text-[14px] tracking-[0.22em] uppercase font-bold opacity-80" style="font-family:${t.fontSubtitle};color:${t.text}">ROMEU &amp; TALITA</span><span class="h-px w-8 sm:w-12 lg:hidden" style="background:${t.accent}"></span></div>
+ <div class="flex flex-col items-center lg:items-start gap-2"><div class="px-3 py-1 rounded-full border text-[10px] sm:text-[11px] font-black tracking-[0.16em] uppercase" style="background:${t.accent}22;border-color:${t.accent}77;color:${t.text};font-family:'Bebas Neue',sans-serif">ATO ${act.id} DE 5 · ${esc(act.title)}</div><div class="subtitle-animate flex items-center gap-3"><span class="h-px w-8 sm:w-12" style="background:${t.accent}"></span><span class="text-[13px] sm:text-[14px] tracking-[0.22em] uppercase font-bold opacity-80" style="font-family:${t.fontSubtitle};color:${t.text}">ROMEU &amp; TALITA</span><span class="h-px w-8 sm:w-12 lg:hidden" style="background:${t.accent}"></span></div><span class="text-xs opacity-60 tracking-wide">${esc(act.subtitle)} · fotos ${act.start+1}–${act.end+1}</span></div>
  <h1 class="title-animate text-[34px] sm:text-[48px] lg:text-[56px] xl:text-[72px] leading-[0.92] tracking-[-0.02em] font-black break-words max-w-[14ch]" style="font-family:${t.fontTitle};color:${t.titleColor};text-shadow:${shadow};line-height:${t.key==="mario"?"1.2":".92"};${t.key==="mario"?"font-size:clamp(18px,3.6vw,30px)":""}">${esc(p.title)}</h1>
  <div class="flex flex-wrap items-center justify-center lg:justify-start gap-2 sm:gap-2.5 mt-1"><span class="px-3 py-1.5 rounded-full text-[10px] sm:text-[11px] font-black tracking-[0.18em] uppercase border" style="background:${t.accent}22;border-color:${t.accent}55;color:${t.text};font-family:'Bebas Neue',sans-serif">Tema: ${esc(t.key)}</span><span class="px-3 py-1.5 rounded-full text-[10px] sm:text-[11px] font-bold tracking-wide border bg-black/20" style="border-color:#ffffff26;color:${t.text}">${esc(t.description)}</span></div>
  <p class="mt-2 sm:mt-3 max-w-[42ch] text-[16px] sm:text-[18px] leading-relaxed opacity-[0.88]" style="font-family:${t.key==="romeujulieta"?"'Cormorant Garamond',serif":"'Caveat',cursive"};line-height:1.5;color:${t.text}">${esc(t.phrase)}</p>
  <div class="mt-6 sm:mt-8 w-full max-w-[420px]"><div class="flex items-center justify-between mb-3"><span class="text-[10px] tracking-[0.2em] uppercase font-bold opacity-40" style="font-family:'Bebas Neue',sans-serif">Navegação • ${SLIDES.length} temas</span><span class="text-[10px] font-mono opacity-40">${n} / ${total}</span></div>
- <nav class="no-scrollbar flex flex-wrap gap-[7px] sm:gap-2" aria-label="Navegação dos slides">${SLIDES.map((s,i)=>`<button data-index="${i}" aria-label="Ir para ${esc(s.title)}" aria-current="${i===current}" class="relative flex-shrink-0 transition-all duration-300 rounded-full ${i===current?"w-10 sm:w-12 h-2 sm:h-2.5":"w-2.5 h-2.5 hover:scale-125"}" style="background:${i===current?t.accent:"rgba(255,255,255,.28)"};box-shadow:${i===current?"0 0 12px "+t.accent:"none"}"></button>`).join("")}</nav></div></section>
+ <nav class="flex flex-col gap-3" aria-label="Navegação por atos e fotos">
+ ${ACTS.map(a=>`
+ <div class="flex flex-col gap-1.5">
+  <button data-index="${a.start}" class="text-left text-[10px] tracking-[0.12em] uppercase font-bold opacity-75 hover:opacity-100" style="color:${current>=a.start&&current<=a.end?t.accent:t.text}">ATO ${a.id} · ${esc(a.title)}</button>
+  <div class="flex flex-wrap items-center gap-1.5">${SLIDES.slice(a.start,a.end+1).map((s,j)=>{const i=a.start+j;return `<button data-index="${i}" aria-label="Ato ${a.id}, foto ${i+1}: ${esc(s.title)}" aria-current="${i===current}" class="relative flex-shrink-0 transition-all duration-300 rounded-full ${i===current?"w-8 sm:w-10 h-2.5":"w-2 h-2 hover:scale-125"}" style="background:${i===current?t.accent:"rgba(255,255,255,.28)"};box-shadow:${i===current?"0 0 10px "+t.accent:"none"}"></button>`;}).join("")}</div>
+ </div>
+ `).join("")}
+</nav></div></section>
  <button data-action="next" aria-label="Próximo" class="hidden lg:flex absolute right-6 top-1/2 -translate-y-1/2 z-20 w-12 h-12 items-center justify-center rounded-full border bg-black/20 text-xl" style="border-color:#ffffff26;color:${t.text}">›</button></main>
  <footer class="relative z-10 w-full px-4 sm:px-8 py-4 flex items-center justify-center opacity-40"><span class="text-[10px] font-mono tracking-wide">ROMEU &amp; TALITA • 2025 • álbum • ${n} / ${total}</span></footer></div>`;
  document.querySelector("#album-photo").addEventListener("error",()=>{const e=document.querySelector("#image-error");e.classList.remove("hidden");e.classList.add("flex");document.querySelector("#album-photo").classList.add("hidden");},{once:true});
