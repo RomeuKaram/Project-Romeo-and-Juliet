@@ -6,7 +6,7 @@ const THEMES = {
     "key": "corinthians",
     "fontTitle": "'Bebas Neue', sans-serif",
     "fontSubtitle": "'Bebas Neue', sans-serif",
-    "bg": "linear-gradient(145deg, #000000 0%, #111111 20%, #1a1a1a 45%, #f5f5f5 75%, #ffffff 100%)",
+    "bg": "radial-gradient(ellipse at 75% 85%, #3a3000 0%, #171717 42%, #080808 78%, #000000 100%)",
     "text": "#f2f2f2",
     "titleColor": "#FFCC00",
     "accent": "#FFCC00",
